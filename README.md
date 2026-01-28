@@ -27,7 +27,7 @@ git clone https://github.com/celestelomeli/flask_v2.git
 cd flask_v2
 ```
 
-2. Create a virtual environment:
+2. (Optional but recommended) Create a virtual environment:
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
