@@ -1,11 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en"> <!-- Specifies document language -->
 <head>
+    <!-- Character encoding -->
+    <meta charset="UTF-8">
+    <!-- Responsive design for mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Greeting</title>
+    <!-- Link to external CSS file using Flask's url_for helper -->
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
+    <!-- Jinja2 template variable: displays the name passed from Flask route -->
     <h1>Hi, {{ name }}!</h1>
     <p>Pleasure to meet you!</p>
+    <!-- Link back to home page -->
+    <a href="/" class="back-link">Go Back</a>
 </body>
 </html>
