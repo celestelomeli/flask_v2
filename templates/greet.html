@@ -1,19 +1,22 @@
 <!DOCTYPE html>
-<html lang="en"> <!-- Specifies document language -->
+<html lang="en"> <!-- Set language for accessibility -->
 <head>
-    <!-- Character encoding -->
+    <!-- Define character encoding -->
     <meta charset="UTF-8">
-    <!-- Responsive design for mobile devices -->
+    <!-- Make site responsive on mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Greeting</title>
-    <!-- Link to external CSS file using Flask's url_for helper -->
+    <!-- Link to CSS file using Flask's url_for -->
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <!-- Jinja2 template variable: displays the name passed from Flask route -->
-    <h1>Hi, {{ name }}!</h1>
-    <p>Pleasure to meet you!</p>
-    <!-- Link back to home page -->
-    <a href="/" class="back-link">Go Back</a>
+    <!-- Container div to create the centered white card -->
+    <div class="container">
+        <!-- Display the name passed from Flask using Jinja2 template syntax -->
+        <h1>Hi, {{ name }}!</h1>
+        <p>Pleasure to meet you!</p>
+        <!-- Link back to home page -->
+        <a href="/" class="back-link">Go Back</a>
+    </div>
 </body>
 </html>

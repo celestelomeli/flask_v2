@@ -1,57 +1,107 @@
 /* styles.css */
 
-/* Base body styling */
+/* Body takes full viewport height and centers content using flexbox */
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* Full viewport height */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    /* Light blue gradient background */
+    background: linear-gradient(135deg, #a8c0ff 0%, #c9d6ff 100%);
 }
 
-/* Header with bottom border */
+/* White card that holds all the content */
+.container {
+    background: white;
+    padding: 40px 50px;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15); /* Drop shadow for depth */
+    text-align: center;
+    max-width: 400px;
+    width: 90%; /* Responsive width */
+}
+
+/* Main heading style */
 h1 {
-    border-bottom: 2px solid #333;
-    padding-bottom: 20px;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 2em;
 }
 
-/* Form spacing */
+/* Paragraph text on greeting page */
+p {
+    color: #666;
+    font-size: 1.1em;
+    margin: 20px 0;
+}
+
+/* Add spacing above the form */
 form {
-    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
-/* Text input fields styling */
-input[type="text"],
-input[type="email"] {
-    width: 300px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+/* Style the label above the input */
+label {
+    display: block; /* Makes label take full width */
     margin-bottom: 10px;
+    color: #555;
+    font-weight: 500;
+}
+
+/* Text input field styling */
+input[type="text"] {
+    width: 100%; /* Full width of container */
+    padding: 12px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 16px;
+    box-sizing: border-box; /* Include padding in width calculation */
+    margin-bottom: 20px;
+    transition: border-color 0.3s; /* Smooth transition on focus */
+}
+
+/* Change border color when input is focused */
+input[type="text"]:focus {
+    outline: none; /* Remove default browser outline */
+    border-color: #6b9bd1; /* Light blue to match background */
 }
 
 /* Submit button styling */
 input[type="submit"] {
-    background-color: #1c9979;
-    color: #fff;
+    width: 100%; /* Full width button */
+    background: linear-gradient(135deg, #6b9bd1 0%, #8fb3d8 100%); /* Blue gradient */
+    color: white;
     border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s; /* Smooth hover animation */
 }
 
-/* Submit button hover effect */
+/* Button lifts up slightly on hover */
 input[type="submit"]:hover {
-    background-color: #157a61;
+    transform: translateY(-2px); /* Move up 2px */
+    box-shadow: 0 5px 15px rgba(107, 155, 209, 0.4); /* Add shadow */
 }
 
 /* Back link styling */
 .back-link {
     display: inline-block;
     margin-top: 20px;
-    color: #1c9979;
+    color: #6b9bd1; /* Match button color */
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s; /* Smooth color change */
 }
 
-/* Back link hover effect */
+/* Darken link color on hover */
 .back-link:hover {
+    color: #5a8ac0;
     text-decoration: underline;
 }
