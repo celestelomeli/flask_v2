@@ -1,27 +1,27 @@
-#This line imports three modules from the Flask package
-#'Flask' is the class used to create Flask application instance
-#'render_template' function allows you to render HTML templates from flask app
-#'request' allows access to to incoming request data (i.e. POST)
+# Flask: Main class for creating the web application
+# render_template: Renders HTML templates with dynamic data
+# request: Accesses incoming HTTP request data (forms, query params, etc.)
 from flask import Flask, render_template, request
 
-#new instance of Flask class assigned to variable 'app'
-#'__name__' = name of current Python module
+# Create Flask application instance
 app = Flask(__name__)
 
-#route for root URL '/' that will execute 'index()' function
+# Route for home page
 @app.route('/')
 def index():
+    """Render the home page with name input form."""
     return render_template('index.html')
 
-#defines a route for URL '/greet' only for HTTP POST requests
-#User submits form to greet URL function executes
-#retrieving the value of 'name' field from form data and passing the 'name' variable to the template
+# Route for form submission (POST only)
 @app.route('/greet', methods=['POST'])
 def greet():
+    """Process form submission and display personalized greeting."""
+    # Get 'name' value from submitted form data
     name = request.form['name']
+    # Pass name variable to template for rendering
     return render_template('greet.html', name=name)
 
-#Checks whether the script is run as main module and executes starting the Flask development server
-#App accessible at default host and port 
+# Run the Flask development server
 if __name__ == '__main__':
-    app.run()
+    # debug=True enables auto-reload and detailed error messages
+    app.run(debug=True)
