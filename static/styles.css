@@ -1,28 +1,33 @@
 /* styles.css */
 
+/* Base body styling */
 body {
     font-family: Arial, sans-serif;
     margin: 20px;
 }
 
+/* Header with bottom border */
 h1 {
     border-bottom: 2px solid #333;
     padding-bottom: 20px;
 }
 
+/* Form spacing */
 form {
     margin-bottom: 20px;
 }
 
+/* Text input fields styling */
 input[type="text"],
 input[type="email"] {
-    width: 100px;
+    width: 300px;
     padding: 8px;
     border: 1px solid #ccc;
     border-radius: 4px;
     margin-bottom: 10px;
 }
 
+/* Submit button styling */
 input[type="submit"] {
     background-color: #1c9979;
     color: #fff;
@@ -30,4 +35,23 @@ input[type="submit"] {
     padding: 10px 20px;
     border-radius: 4px;
     cursor: pointer;
+}
+
+/* Submit button hover effect */
+input[type="submit"]:hover {
+    background-color: #157a61;
+}
+
+/* Back link styling */
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #1c9979;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Back link hover effect */
+.back-link:hover {
+    text-decoration: underline;
 }

@@ -1,15 +1,22 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Enter your name</title>
-        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    </head>
+<html lang="en"> <!-- Specifies document language -->
+<head>
+    <!-- Character encoding -->
+    <meta charset="UTF-8">
+    <!-- Responsive design for mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter your name</title>
+    <!-- Link to external CSS file using Flask's url_for helper -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
 <body>
     <h1>Welcome!</h1>
+    <!-- Form submits to /greet route via POST method -->
     <form action="/greet" method="post">
         <label for="name">Please enter your name:</label>
-        <input type="text" name="name" required>
+        <!-- Input field with id matching label's 'for' attribute, required prevents empty submission -->
+        <input type="text" id="name" name="name" required>
         <input type="submit" value="Submit">
     </form>
-</body> 
+</body>
 </html>
